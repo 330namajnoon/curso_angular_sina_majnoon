@@ -1,0 +1,13 @@
+
+
+let preciosSinIba = [100,7.32,205,44.3];
+
+function iba(iba = 21,datos = []) {
+    return datos.map(d => parseFloat((d * (1+(iba/100))).toFixed(2)));
+}
+
+let preciosConIBA = iba(21,preciosSinIba);
+
+console.log(preciosConIBA);
+
+
