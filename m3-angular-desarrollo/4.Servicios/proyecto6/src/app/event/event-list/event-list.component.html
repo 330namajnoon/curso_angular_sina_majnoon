@@ -1,0 +1,20 @@
+<h2>Listado de Eventos TODOs</h2>
+
+<!-- https://uiverse.io/Mike11jr/soft-mayfly-11 -->
+<button class="btn" (click)="findAll()">
+    Tareas
+</button>
+<button class="btn" (click)="findAllByCompletedTrue()">
+    Completas
+</button>
+<button class="btn" (click)="findAllByCompletedFalse()">
+    Pendientes
+</button>
+<ul>
+    <li *ngFor="let event of events">
+       <span [ngClass]="event.completed ? 'completed' : 'uncompleted'">
+        {{event.id}} {{event.userId}} {{event.title}} {{event.completed}}
+       </span> 
+        
+    </li>
+</ul>
